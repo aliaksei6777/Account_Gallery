@@ -24,7 +24,9 @@ export default class Selector extends LightningElement {
     async fetchData(){
         try {
             let result = await getAccountList({selectType: this.value})
+            console.log(result)
             this.accounts = result;
+            
         } catch (e){
             console.log('Selector error ',e);
         }
