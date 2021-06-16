@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+} 
+.wrapper{
+  min-height: 100vh;
+  background: #ccc;
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  height: 50px;
+  background: #ffffff;
+  color: rgb(46, 46, 46);
+  font-size: x-large;
+  padding: 10px;
+}
+.picklist{
+  width: 170px;
+  margin: 0 auto;
+  height: 80px;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+
+  background: #eee;
+  color: #000; 
+
+}
+.containerList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+
+

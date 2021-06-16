@@ -1,0 +1,35 @@
+<template>
+    <div class="wrapper">
+        <template if:true={detailsAccount}>
+            <div class="container">
+                <div class="details">
+                    Details 
+                </div>
+                <div class="accountinfo">
+                    <div class="accountheader">
+                        <div class="name">
+                            <img src="http://www.cartassist.co.uk/wp-content/uploads/2017/01/salesforce-tile.png"></img>
+                            <span>{detailsAccount.Name}</span>
+                        </div>
+                        <div>
+                            <c-nav-to-account-page accountid={detailsAccount.Id}></c-nav-to-account-page>
+                        </div>
+                    </div>
+                    <dl class="slds-list_horizontal slds-wrap">
+                        <dt class="slds-item_label slds-text-color_weak slds-truncate" title="First Label">Account Type</dt>
+                        <dd class="slds-item_detail slds-truncate">{detailsAccount.Type}</dd>
+                        <dt class="slds-item_label slds-text-color_weak slds-truncate" title="Second Label">Budget</dt>
+                        <dd class="slds-item_detail slds-truncate">${detailsAccount.Budget__c}</dd>
+                        <dt class="slds-item_label slds-text-color_weak slds-truncate" title="Second Label">Description</dt>
+                        <dd class="slds-item_detail slds-truncate heightCustom">{detailsAccount.Description}</dd>
+                    </dl>
+                </div>
+            </div>
+        </template>
+        <template if:false={detailsAccount}>
+            <header class="select">
+                Select an account
+            </header>
+        </template>
+    </div>
+</template>

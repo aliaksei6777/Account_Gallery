@@ -1,0 +1,27 @@
+<template>
+    <div class="wrapper">
+        <header class="header">
+            Find an account
+        </header>
+        <div class="content">
+            <div class="picklist">
+                <lightning-combobox
+                    value={value}
+                    placeholder="Select Progress"
+                    options={options}
+                    onchange={handleChange} >
+                </lightning-combobox>
+            </div>
+            <div class="containerList">
+                <template if:true={accounts}>
+                    <template for:each={accounts} for:item="account">
+                        <c-tile 
+                            key={account.Id} 
+                            account={account}>
+                        </c-tile>
+                    </template>
+                </template>
+            </div>
+        </div>
+    </div>
+</template>

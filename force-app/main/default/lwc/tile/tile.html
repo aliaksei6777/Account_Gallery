@@ -1,0 +1,14 @@
+<template>
+    <div class="container">
+        <a onclick={tileClick}>
+            <img src="http://www.cartassist.co.uk/wp-content/uploads/2017/01/salesforce-tile.png"></img>
+        </a>
+        <div>
+            <div><b>Name: </b>{account.Name}</div>
+            <div><b>Owner: </b>{account.Owner.Name}</div>
+            <div><b>Budget: </b>${account.Budget__c}</div>
+            <div><b>Employees: </b>{account.Number_of_Employees__c}</div>
+            <div><b>Type: </b>{account.Type}</div>
+        </div>
+    </div>
+</template>
